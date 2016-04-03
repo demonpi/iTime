@@ -41,15 +41,16 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('PlaylistsCtrl', function($scope) {
-  $scope.playlists = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
-  ];
+.controller('MainWindowCtrl', function($scope) {
+  $scope.data = { 'time' : '25' };
+
+  $scope.selectTimer = function(val) {
+    $scope.timeForTimer = val;
+    $scope.timer = val
+    $scope.started = false;
+    $scope.paused = false;
+    $scope.done = false;
+  };
 })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {

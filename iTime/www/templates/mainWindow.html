@@ -1,0 +1,17 @@
+<ion-view view-title="iTime">
+  <ion-content>
+	<div class="item range range-positive">
+	    <i class="icon ion-ios-clock-outline"></i>
+	    <input type="range" name="time" ng-model="data.time" min="1" max="60" step="1">
+	</div>
+	<div align="center" style="padding-top: 12em">
+		<i style="font-size: 6em">{{data.time}}</i>
+		<i>分钟</i>
+	</div>
+	<div align="center" >
+		<button class="button button-clear button-positive" style="font-size: 2em; padding-top: 5em" ng-click="selectTimer()">
+  			开始
+		</button>
+	</div>
+  </ion-content>
+</ion-view>
